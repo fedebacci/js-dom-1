@@ -66,16 +66,25 @@
                             JS DOM 1 Light switch
                         </h1>
 
+                        <div>
+                            <button id="switchButton" class="btn btn-primary">
+                                Accendi le lampadine
+                            </button>
+                        </div>
                         <img src="./assets/img/white_lamp.png" alt="Lampadina spenta" />
-                        <button id="switchButton" class="btn btn-primary">
-                            Accendi la lampadina
-                        </button>
+                        <img id="imgWhiteLamp" src="./assets/img/white_lamp.png" alt="Lampadina spenta" />
+                        <img id="imgYellowLamp" class="d-none" src="./assets/img/yellow_lamp.png"
+                            alt="Lampadina spenta" />
 
 
-                        <div class="lightbulb">
+                        <span class="lightbulb">
                             <div id="bulb"></div>
                             <div class="base"></div>
-                        </div>
+                        </span>
+                        <span id="CSSlightbulb" class="lightbulb ms-5">
+                            <div id="bulb"></div>
+                            <div class="base"></div>
+                        </span>
                     </div>
                 </div>
             </div>
