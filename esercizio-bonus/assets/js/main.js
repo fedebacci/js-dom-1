@@ -2,24 +2,30 @@ const switchButton = document.getElementById('switchButton');
 console.debug('switchButton', switchButton);
 const lightBulbImage = document.querySelector('img');
 console.debug('lightBulbImage', lightBulbImage);
+const lightBulbCSSElement = document.getElementById('bulb');
+console.debug('lightBulbCSSElement', lightBulbCSSElement);
 
 switchButton.addEventListener('click', function() {
-    switchLight(switchButton, lightBulbImage)
+    switchLight(switchButton, lightBulbImage, lightBulbCSSElement)
 });
 
-function switchLight() {
-    console.debug('switchButton', switchButton);
-    console.debug('lightBulbImage', lightBulbImage);
+function switchLight(button, image, CSSelement) {
+    console.debug('button', button);
+    console.debug('image', image);
 
-    if (lightBulbImage.src.includes('white')) {
-        lightBulbImage.src = './assets/img/yellow_lamp.png';
-        lightBulbImage.alt = 'Lampadina accesa';
-        switchButton.innerText = 'Spegni la lampadina';
-        // console.debug('switchButton DOPO', switchButton);
+    if (image.src.includes('white')) {
+        image.src = './assets/img/yellow_lamp.png';
+        image.alt = 'Lampadina accesa';
+        CSSelement.style.backgroundColor = 'yellow';
+        CSSelement.style.boxShadow = '0 0 5rem 1px rgba(255, 255, 0, 1)';
+        button.innerText = 'Spegni la lampadina';
+        // console.debug('button DOPO', button);
     } else {
-        lightBulbImage.src = './assets/img/white_lamp.png';
-        lightBulbImage.alt = 'Lampadina spenta';
-        switchButton.innerText = 'Accendi la lampadina';
-        // console.debug('switchButton DOPO', switchButton);
+        image.src = './assets/img/white_lamp.png';
+        image.alt = 'Lampadina spenta';
+        CSSelement.style.backgroundColor = 'white';
+        CSSelement.style.boxShadow = '0 0 2rem 1px rgba(0,0,0,0.25)';
+        button.innerText = 'Accendi la lampadina';
+        // console.debug('button DOPO', button);
     };
 };
