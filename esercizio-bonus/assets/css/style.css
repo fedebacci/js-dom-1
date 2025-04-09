@@ -32,17 +32,11 @@ section {
 
 /* LAMPADINA CSS */
 .lightbulb {
-    /* ! DEBUG */
-    /* border: 1px solid; */
-
     width: 10rem;
     height: 13rem;
 }
 
 #bulb {
-    /* ! DEBUG */
-    /* border: 1px solid; */
-
     box-shadow: 0 0 2rem 1px rgba(0,0,0,0.25);
     
     aspect-ratio: 1/1;
@@ -50,9 +44,6 @@ section {
 }
 
 .base {
-    /* ! DEBUG */
-    /* border: 1px solid; */
-
     background-color: #bbb;
     box-shadow: 0 0 2rem 1px rgba(0,0,0,0.25);
 
