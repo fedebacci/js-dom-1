@@ -6,4 +6,6 @@ btnTurnOn.addEventListener('click', () => {
     console.debug('lightBulbImage', lightBulbImage);
     lightBulbImage.src = './assets/img/yellow_lamp.png';
     lightBulbImage.alt = 'Lampadina accesa';
+
+    btnTurnOn.classList.add('d-none')
 });
